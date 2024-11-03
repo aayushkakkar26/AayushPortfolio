@@ -1,0 +1,8 @@
+
+  /* Create a lighter, more neutral tone for light theme */
+.light-theme-video {
+  filter: invert(1) brightness(0.8) saturate(0.5) hue-rotate(180deg);
+}
+
+  
+  

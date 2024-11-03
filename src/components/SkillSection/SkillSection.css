@@ -1,0 +1,61 @@
+@keyframes leftToRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes rightToLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Apply these animations */
+  .animate-left-to-right {
+    animation: leftToRight 25s linear infinite;
+  }
+  
+  .animate-right-to-left {
+    animation: rightToLeft 25s linear infinite;
+  }
+  
+  
+  .skills-section {
+    position: relative;
+    
+    width: 75%;
+    
+      
+  }
+  
+  .skills-row {
+    white-space: nowrap;
+  }
+  
+  .skills-section:before, 
+  .skills-section:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10%;
+    pointer-events: none;
+  }
+
+  .star {
+    color: white; /* Hide stars initially */
+    transition: color 0.3s ease;
+    font-size: 1.5rem; /* Adjust size if needed */
+}
+
+.filled {
+    color: #D4A03E; /* Color for filled stars */
+}
+
+
