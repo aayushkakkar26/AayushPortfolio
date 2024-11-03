@@ -25,8 +25,8 @@ export default function SkillSection() {
         { name: 'NLP', rating: 2 },
         { name: 'Open_CV', rating: 2 },
         { name: 'Face Recognition', rating: 2.5 },
-        { name: 'SQL', rating: 4 },
         { name: 'MYSQL', rating: 3 },
+        { name: 'SQL', rating: 4 },
     ];
     const {theme} = useContext(ToggleContext);
     return (
