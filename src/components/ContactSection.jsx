@@ -3,7 +3,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { IoMdMail } from "react-icons/io";
 import { ToggleContext } from '../store/Toggle-Context';
-
+import logo from "../assets/logo2.png"
 export default function ContactSection() {
 
   const { theme } = useContext(ToggleContext);
@@ -61,7 +61,7 @@ export default function ContactSection() {
         <div className="  md:w-1/2 flex items-center justify-center ">
           <div className="w-full h-full ">
             <img
-              src="/src/assets/logo2.PNG"
+              src={logo}
               alt="Profile"
               className="w-full h-full object-cover"
               loading='lazy'

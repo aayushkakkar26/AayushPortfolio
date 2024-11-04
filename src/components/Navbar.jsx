@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react'
 import { Menu, X, Moon, Sun } from 'lucide-react'
 import { ToggleContext } from '../store/Toggle-Context'
-
+import logo from "../assets/logo2.png"
 export default function Navbar() {
     const [showNavbar, setShowNavbar] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
@@ -44,7 +44,7 @@ export default function Navbar() {
                 {/* Logo */}
                 <a href='#contact' className={`h-14 w-14 rounded-full cursor-pointer border-4 p-1 overflow-hidden ${theme === 'dark' ? 'border-[#D4A03E]' : 'border-gray-700'
                     }`}>
-                    <img src="/src/assets/logo2.PNG" className="w-10 scale-x-[-1] animate-pulse" alt="Logo" />
+                    <img src={logo} className="w-10 scale-x-[-1] animate-pulse" alt="Logo" />
                 </a>
 
 

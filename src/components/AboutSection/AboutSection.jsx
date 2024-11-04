@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState, useContext } from 'react';
 
-import Aayush from '/src/assets/Aayush.png';
+
 
 import "./AboutSection.css"
 

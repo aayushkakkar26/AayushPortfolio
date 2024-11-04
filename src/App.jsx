@@ -10,7 +10,7 @@
   import ContactSection from './components/ContactSection';
   import Socials from './components/Socials';
   import LoadingScreen from './components/LoadingScreen';
-  import att from "../src/assets/Projects/att.png"
+
   import { useContext, useRef, useState, useEffect } from 'react';
   import { ToggleContext } from './store/Toggle-Context';
 

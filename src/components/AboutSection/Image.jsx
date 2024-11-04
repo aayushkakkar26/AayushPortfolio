@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import AayushImg from "../../assets/Aayush.png"
 export default function Component() {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -11,7 +11,7 @@ export default function Component() {
         onMouseLeave={() => setIsHovered(false)}
       >
         <img
-          src="/src/assets/Aayush.png"
+          src={AayushImg}
           alt="Portfolio profile"
           className={`md:w-9/12 lg:w-9/12 sm:w-9/12 w-full md:ml-20 lg:ml-20 h-auto transition-all duration-500 ease-out ${
             isHovered ? 'glow-effect pulse-effect tilt-scale' : ''

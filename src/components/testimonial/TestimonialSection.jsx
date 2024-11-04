@@ -1,37 +1,44 @@
+import './Testimonial.css';
 import React, { useState, useEffect, useContext } from 'react';
+
+import { ToggleContext } from '../../store/Toggle-Context';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
-import './Testimonial.css';
-import { ToggleContext } from '../../store/Toggle-Context';
 import { FaRobot } from "react-icons/fa6";
+
+import man from "../../assets/man2.png"
+import shikhu from "../../assets/shikhu.jpeg"
+import marcaids from "../../assets/marcaids.png"
+import chao from "../../assets/chao.jpg"
 const testimonials = [
   {
     id: 1,
     name: "Anoop Saha",
     role: "Technical Project Manager, LTIMindtree",
     content: '" He is excellent, I strongly recommend him; his technical skills and dedication make him a standout professional, and he will be an asset to the company. His proactive approach and positive attitude contribute greatly to team success. "',
-    image: "/src/assets/man2.png"
+    image: [man]
   },
   {
     id: 2,
     name: "Shikhu Gautam",
     role: "Co-Founder, Marcaids",
     content: '" Collaborating with Aayush was truly exceptional. He took the lead with a clear vision and inspired the team to achieve more than we thought possible. His ability to navigate challenges and deliver results ahead of schedule was impressive. You can easily trust him with all your development queries.   "',
-    image: "/src/assets/shikhu.jpeg"
+    image: [shikhu]
   },
   {
     id: 3,
     name: "Chirag Yadav",
     role: "Founder, Marcaids",
     content: '" We had a wonderful experience working with Aayush. He managed to work and lead the team and deliver the results before the expected timeline. He is hardworking, passionate and great asset to the team. "',
-    image: "/src/assets/marcaids.png"
+    image: [marcaids]
   },
   {
     id: 4,
     name: "Ankur Goel",
     role: "CEO, Chaotix.AI",
     content: '" Aayush made a remarkable impact during his brief time with us as an AI intern. Despite the short duration, he demonstrated leadership by taking charge of the team and driving progress effectively. His technical expertise and dedication were so impressive. "',
-    image: "/src/assets/chao.jpg"
+    image: [chao]
   }
 ];
 
