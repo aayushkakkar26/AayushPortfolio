@@ -1,5 +1,7 @@
 # My Portfolio's code
 
+here's the link to the site: https://aayushkakkar.netlify.app/
+
 Welcome to my portfolio! I'm Aayush Kakkar, a passionate front-end  developer dedicated to creating efficient, elegant, and user-friendly web applications. This portfolio showcases my projects, skills, and experience in web development.
 
 ## Table of Contents
@@ -41,20 +43,9 @@ Here are some of the projects I've worked on:
 5. **[Investment Calculator](https://inves-cal.netlify.app/)**
    - A user-friendly investment calculator built with React and Tailwind CSS.
 
-6. **[iTask - Your Task Planner](https://itask-yourtaskplannerak.netlify.app/)**
-   - A task planner application developed with React and Tailwind CSS.
+and rest you can check on my portfolio
 
-7. **[PlacePicker](https://geoplacepicker.netlify.app/)**
-   - A React-based app that allows users to select and save locations.
 
-8. **[Quizz App](https://akquizzzapp.netlify.app/)**
-   - An engaging quiz application that tests users' knowledge across various topics.
-
-9. **[Stop Game](https://stop-game.netlify.app/)**
-   - A fun and interactive game application created using React and Tailwind CSS.
-
-10. **[Modern TicTacToe](https://moderntictactoe.netlify.app/)**
-    - A modern twist on the classic Tic Tac Toe game.
 
 ## Color Palette
 
