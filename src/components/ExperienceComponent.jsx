@@ -17,7 +17,7 @@ const experiences = [
         company: "LTIMindtree",
         period: "Dec 2023 - Mar 2024",
         description: "Completed a comprehensive Full Stack training in .NET, mastering DotNet technologies and enhancing project management skills. Collaborated on an Online Job Application Portal (CareersHub) capstone project, showcasing teamwork and technical proficiency. This training led to securing a full-time Software Engineer position at LTIMindtree.",
-        skills: [".NET framework", "Angular", "C#", "TypeScript", "MSSQL Server", "HTML", "CSS"]
+        skills: [".NET framework", "Angular", "TypeScript", "C#","MSSQL Server", "HTML", "CSS"]
     },
     {
         title: "AI Intern",
