@@ -64,7 +64,7 @@ export default function TestimonialSection() {
   if (theme === "light") {
     clsses += " bg-gradient-to-b from-gray-400 via-gray-500 to-gray-700 text-gray-700";
   } else {
-    clsses += " bg-gradient-to-b from-gray-800 via-gray-800 to-gray-900";
+    clsses += " bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900";
   }
 
   return (

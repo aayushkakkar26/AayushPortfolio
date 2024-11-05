@@ -10,7 +10,7 @@
   import ContactSection from './components/ContactSection';
   import Socials from './components/Socials';
   import LoadingScreen from './components/LoadingScreen';
-
+  import ExperienceComponent from './components/ExperienceComponent.jsx';
   import { useContext, useRef, useState, useEffect } from 'react';
   import { ToggleContext } from './store/Toggle-Context';
 
@@ -19,14 +19,14 @@
     const {theme} = useContext(ToggleContext);
     const aboutRef = useRef(null);
 
-    let classes = " relative centerDiv min-h-screen   z-10"
+      let classes = " relative centerDiv min-h-screen   z-10"
 
-    if(theme ==="light"){
-      classes +=" bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 "
-    }
-    else{
-      classes +=" bg-gradient-to-r from-gray-800 via-gray-900 to-black"
-    }
+      if(theme ==="light"){
+        classes +=" bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 "
+      }
+      else{
+        classes +=" bg-gradient-to-r from-gray-800 via-gray-900 to-black"
+      }
 
 
     useEffect(() => {
@@ -115,23 +115,23 @@
           <SkillSection />
         </div>
 
-        <div className={`${classes} over-section top-[55rem] md:top-[80rem] lg:top-[76rem]  `}>
+        <div className={`${classes}  top-[55rem] md:top-[80rem] lg:top-[76rem]  `}>
           <ProjectsSection />
           <ExploreMore />
         </div>
+        <div className={`${classes} over-section top-[55rem] md:top-[80rem] lg:top-[72rem] pb-28  `}>
+          <ExperienceComponent />
+        </div>
 
 
-        <div className=" relative min-h-screen top-[45rem] md:top-[75rem] lg:top-[70rem]  ">
+        <div className=" relative min-h-screen top-[45rem] md:top-[75rem] lg:top-[65rem]  ">
         <TestimonialsSection /> 
         </div>
-        <div className="projects-section relative z-10 centerDiv min-h-sc top-[44rem]  md:top-[75rem] lg:top-[70rem]  ">
+        <div className="projects-section relative z-10 centerDiv min-h-sc top-[44rem]  md:top-[75rem] lg:top-[65rem]  ">
 
         <ContactSection />
         </div>
-        {/* <div className="projects-section relative z-10 flex flex-col justify-center items-center   min-h-screen bg-black top-[75rem]">
-        </div>   */}
-        {/*
-        */}
+       
 
 
       </>

@@ -11,6 +11,7 @@ export default function Navbar() {
         { name: 'Home', href: '#home' },
         { name: 'About', href: '#about' },
         { name: 'Work', href: '#work' },
+        { name: 'Experience', href: '#exp' },
         { name: 'Testimonials', href: '#testimonials' },
         { name: 'Contact Me', href: '#contact' }
     ]
@@ -51,7 +52,7 @@ export default function Navbar() {
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex space-x-4">
                     {menuItems.map((item) => (
-                        <li key={item.name} className="text-xl font-semibold cursor-pointer">
+                        <li key={item.name} className="text-lg font-semibold cursor-pointer">
                             <a
                                 href={item.href}
                                 onClick={(e) => scrollToSection(e, item.href)}
