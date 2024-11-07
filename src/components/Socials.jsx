@@ -75,7 +75,6 @@ const Socials = () => {
     </div>
     {showScrollButton && (
       <motion.button  
-      whileTap={{ scale: 0.9 }}
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       className="bg-white bg-opacity-20 backdrop-blur-sm text-gray-900 p-3 md:p-4 rounded-full shadow-lg hover:bg-opacity-30 transition duration-300 group focus:outline-none focus:ring-4 focus:ring-[#D4A03E] focus:ring-opacity-50 fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50"
       aria-label="Scroll to about section"
