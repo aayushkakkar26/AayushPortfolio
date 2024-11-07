@@ -7,16 +7,18 @@ import { ChevronDown } from 'lucide-react';
 
 export default function HeroSection({ abtref }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768);
   const videoRef = useRef(null);
 
   useEffect(() => {
-    // Check for larger screens
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
     const handleResize = () => {
-      if (window.innerWidth >= 768) { // 768px is the breakpoint for larger screens
+      const largeScreen = window.innerWidth >= 768;
+      setIsLargeScreen(largeScreen);
+      if (largeScreen) {
         window.addEventListener('mousemove', handleMouseMove);
       } else {
         window.removeEventListener('mousemove', handleMouseMove);
@@ -24,7 +26,7 @@ export default function HeroSection({ abtref }) {
     };
 
     window.addEventListener('resize', handleResize);
-    handleResize(); // Initial check
+    handleResize();
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -49,7 +51,7 @@ export default function HeroSection({ abtref }) {
   let classes = "hero-content centerDiv fixed h-full w-full ";
 
   if (theme === "light") {
-    classes += " bg-gradient-to-b from-gray-700 via-gray-500 to-gray-400  ";
+    classes += " bg-gradient-to-b from-gray-700 via-gray-500 to-gray-400 ";
   } else {
     classes += " bg-gradient-to-b from-black via-gray-800 to-gray-800 text-[#D4A03E] ";
   }
@@ -73,9 +75,8 @@ export default function HeroSection({ abtref }) {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="font-sans text-xl sm:text-2xl md:text-3xl mb-8 text-shadow text-center"
           >
-            SOFTWARE ENGINEER 
+            SOFTWARE ENGINEER
           </motion.h2>
-          {/* <p>Aspiring Full Stack Developer | Currently mastering React for dynamic front-end experiences.</p> */}
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -91,25 +92,38 @@ export default function HeroSection({ abtref }) {
             </motion.div>
           </motion.button>
         </div>
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          loading="lazy"
-          className={`absolute top-0 left-0 w-full h-full object-cover -z-10 ${theme === 'light' ? 'light-theme-video' : ''}`}
-        >
-          <source src={bgVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
 
-        {/* Dark Overlay */}
+        {isLargeScreen ? (
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            loading="lazy"
+            className={`absolute top-0 left-0 w-full h-full object-cover -z-10 ${theme === 'light' ? 'light-theme-video' : ''}`}
+          >
+            <source src={bgVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          <div
+            className={`absolute inset-0 ${
+              theme === "light"
+                ? "bg-gradient-to-b from-gray-700 via-gray-500 to-gray-400"
+                : "bg-gradient-to-b from-black via-gray-800 to-gray-800"
+            } -z-10`}
+          />
+        )}
+
         <div className="absolute inset-0 bg-black opacity-60 -z-5" />
-        {window.innerWidth >= 768 && ( // Only show mouse interaction on larger screens
+        {isLargeScreen && (
           <div
             className="absolute inset-0 opacity-30"
             style={{
-              backgroundImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, ${theme === "light"? "rgba(107, 114, 128, 1)": "rgba(212, 160, 62, 1)"} 0%, transparent 15%)`,
+              backgroundImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, ${
+                theme === "light" ? "rgba(107, 114, 128, 1)" : "rgba(212, 160, 62, 1)"
+              } 0%, transparent 15%)`,
               zIndex: "inherit"
             }}
           />

@@ -27,7 +27,7 @@ export default function ContactSection() {
 
           </p>
           <p className="mb-6 text-lg text-white ">
-            Alternatively, check out my <a href="/AayushKakkar_CV.pdf" download className='text-[#D4A03E] mt-5 cursor-pointer hover:underline  '>Resume</a>
+            Alternatively, check out my <a href="/AayushKakkar_Resume.pdf" download className='text-[#D4A03E] mt-5 cursor-pointer hover:underline  '>Resume</a>
           </p>
           <div className="mb-8 space-y-2 flex flex-col items-center md:items-start">
             <div className="w-16 h-0.5 bg-[#D4A03E]"></div>

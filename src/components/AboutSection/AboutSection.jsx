@@ -71,7 +71,7 @@ export default function AboutSection() {
         <a href="tel:+919079318997" className="text-black text-3xl hover:text-gray-700 cursor-pointer transition-colors duration-200 -mb-2">
           <MdOutlinePhoneAndroid />
         </a>
-        <a href="/AayushKakkar_CV.pdf" download className="text-black text-3xl hover:text-gray-700 cursor-pointer transition-colors duration-200 -mb-3">
+        <a href="/AayushKakkar_Resume.pdf" download className="text-black text-3xl hover:text-gray-700 cursor-pointer transition-colors duration-200 -mb-3">
           <PiReadCvLogoFill />
         </a>
         <a href="mailto:aayush90793@gmail.com" className=" text-black text-3xl hover:text-gray-700 cursor-pointer transition-colors duration-200 -mb-2">

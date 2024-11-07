@@ -11,7 +11,7 @@
   import Socials from './components/Socials';
   import LoadingScreen from './components/LoadingScreen';
   import ExperienceComponent from './components/ExperienceComponent.jsx';
-  import { useContext, useRef, useState, useEffect } from 'react';
+  import { useContext, useRef, useState, useEffect, } from 'react';
   import { ToggleContext } from './store/Toggle-Context';
 
   function App() {
